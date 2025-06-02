@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
+  </head>
+  <body class="dark:bg-[#213555] bg-gray-100">
+    <header
+      class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#161179]"
+    >
+      <nav
+        class="relative w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-3 position-fixed"
+      >
+        <div
+          class="flex items-center justify-between duration-500 lg:hover:translate-y-[-5px] min-md:pl-5"
+        >
+          <a
+            class="flex-none font-semibold text-2xl text-white hover:text-gray-200 focus:outline-hidden focus:opacity-80"
+            href="./index.html"
+            aria-label="Brand"
+            >Dev</a
+          >
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle relative size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-white/50 text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none"
+              id="hs-base-header-collapse"
+              aria-expanded="false"
+              aria-controls="hs-base-header"
+              aria-label="Toggle navigation"
+              data-hs-collapse="#hs-base-header"
+            >
+              <svg
+                class="hs-collapse-open:hidden size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                class="hs-collapse-open:block shrink-0 hidden size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+          </div>
+        </div>
+        <div
+          id="hs-base-header"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
+          aria-labelledby="hs-base-header-collapse"
+        >
+          <div
+            class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
+          >
+            <div
+              class="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1"
+            >
+              <a
+                class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                href="./src/Courses.html"
+                aria-current="page"
+              >
+                <svg
+                  class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                  <path
+                    d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                  />
+                </svg>
+                Courses
+              </a>
+              <a
+              class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                href="./src/Contact_Us.html"
+              >
+                <svg
+                  class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                Contact
+              </a>
+              <a
+                class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                href="./src/About_Us.html"
+              >
+                <svg
+                  class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 12h.01" />
+                  <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                  <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                  <rect width="20" height="14" x="2" y="6" rx="2" />
+                </svg>
+                About
+              </a>
+              <div
+                class="relative flex flex-wrap items-center gap-x-1.5 md:ps-2.5 mt-1 md:mt-0 md:ms-1.5 before:block before:absolute before:top-1/2 before:-start-px before:w-px before:h-4 before:bg-white/30 before:-translate-y-1/2"
+              >
+                <a
+                  class="p-2 w-full flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                  href="./src/Login_Register.html"
+                >
+                  <svg
+                    class="shrink-0 size-4 me-3 md:me-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                  Log in
+                </a>
+              </div>
+              <div
+                class="flex min-md:px-5 max-sm:py-3 max-sm:pl-2 duration-500 lg:hover:scale-105"
+              >
+                <label class="inline-flex items-center cursor-pointer">
+                  <input
+                    id="btnMode"
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"
+                  ></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Carousel -->
+      <section>
+        <div
+          data-hs-carousel='{
+    "loadingClasses": "opacity-0",
+    "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+    "isAutoPlay": true
+  }'
+          class="relative"
+        >
+          <div
+            class="hs-carousel relative overflow-hidden w-full lg:h-[600px] md:h-96 sm:h-68 h-[500px] bg-white"
+          >
+            <div
+              class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0"
+            >
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-100 dark:bg-neutral-900"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white w-full h-full"
+                    ><img
+                      class="w-full h-full object-cover"
+                      src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F7f2ea58e-e8fc-42c5-ba21-6656a739c308.png&w=1920&q=75"
+                      alt=""
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-200 dark:bg-neutral-800"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white w-full h-full"
+                    ><img
+                      class="w-full h-full object-cover"
+                      src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F223b15d0-e28c-4d56-bda1-c70456f8ebc2.png&w=1920&q=75"
+                      alt=""
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white w-full h-full"
+                    ><img
+                      class="w-full h-full object-cover"
+                      src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F0d1c2b2b-b9b7-42fc-99e5-193e75b38e6d.png&w=1920&q=75"
+                      alt=""
+                  /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+          >
+            <span class="text-2xl" aria-hidden="true">
+              <svg
+                class="shrink-0 size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+            </span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button
+            type="button"
+            class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+          >
+            <span class="sr-only">Next</span>
+            <span class="text-2xl" aria-hidden="true">
+              <svg
+                class="shrink-0 size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </span>
+          </button>
+
+          <div
+            class="hs-carousel-pagination justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"
+          ></div>
+        </div>
+      </section>
+      <!-- Galleries -->
+      <section>
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+          <div class="pb-12 max-lg:pb-10 max-md:pb-9">
+            <div class="border-l-8 pl-4 border-red-600" data-aos="fade-right">
+              <h2
+                class="text-5xl font-bold text-[#161179] dark:text-white max-lg:text-3xl max-md:text-2xl"
+              >
+                ISTAD <br />ACTIVITY
+              </h2>
+            </div>
+          </div>
+          <div class="pb-12 max-lg:pb-10 max-md:pb-9" data-aos="fade-right">
+            <h2
+              class="text-4xl font-semibold max-lg:text-3xl max-md:text-2xl dark:text-white text-[#161179]"
+            >
+              OUR ACTIVITY
+            </h2>
+            <p class="dark:text-white text-[#161179]">
+              SHOWCASE ACTIVITY AT ISTAD LIKE ADMISSION INTERVIEW, ENTRANCE
+              EXAM, SPECIAL LECTURES, MONTHLY PARTY, STUDY ACTIVITY, REVIEW,
+              EXAM, SHORT COURSE, PRE-UNIVERSITY, FOUNDATION AND EXPERT COURSE.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-lg:gap-2 rounded-lg"
+          >
+            <div class="space-y-3 max-lg:space-y-2" data-aos="flip-left">
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F378d40e6-cbc3-4186-9521-c620ccb1aed7.jpg&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F9118f9a1-994e-48cb-8070-7d5354b0f243.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+            <div class="space-y-3 max-lg:space-y-2" data-aos="flip-right">
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F45e8c384-b10a-429f-b23b-e1752b7b897a.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2Fc946e2b9-84d8-434d-a87c-57f0e12656b8.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+            <div class="space-y-3 max-lg:space-y-2" data-aos="flip-left">
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F18f376fb-7ab9-4a12-a8bb-8df286977a02.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F0facede2-663c-4a4a-b48e-623c1b8cd208.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F9820288b-5967-43a6-92cb-0799b0fb6a2f.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+            <div class="space-y-3 max-lg:space-y-2" data-aos="flip-right">
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F0828598e-3137-499b-9498-ba335828a1e3.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                class="w-full h-auto object-cover rounded-lg"
+                src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F672899f7-b724-46ac-993e-d207208d3177.png&w=640&q=75"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="px-4 sm:px-6 lg:px-8 max-w-[85rem] m-auto"
+          data-aos="fade-right"
+        >
+          <img
+            class="rounded-lg"
+            src="https://www.cstad.edu.kh/_next/image?url=https%3A%2F%2Flms-api.istad.co%2Fapi%2Fv1%2Fmedias%2Fview%2F5992e761-c2a9-45ab-bedd-e5ddb5fe6645.png&w=1920&q=75"
+            alt="Course image"
+          />
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-[#161179]"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
+        <div class="duration-500 lg:hover:translate-y-[-5px]">
+          <a
+            class="max-sm:flex max-sm:justify-center text-2xl font-semibold text-white hover:text-gray-200 focus:outline-hidden"
+            href="./index.html"
+            aria-label="Brand"
+            >Dev</a
+          >
+        </div>
+        <ul class="text-center">
+          <li
+            class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300"
+          >
+            <a
+              class="inline-flex gap-x-2 text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
+              href="./src/About_Us.html"
+            >
+              About
+            </a>
+          </li>
+          <li
+            class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300"
+          >
+            <a
+              class="inline-flex gap-x-2 text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
+              href="./src/Courses.html"
+            >
+              Courses
+            </a>
+          </li>
+          <li
+            class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300"
+          >
+            <a
+              class="inline-flex gap-x-2 text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
+              href="./src/Contact_Us.html"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+        <div class="md:text-end space-x-2 m-auto">
+          <a
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            href="https://web.facebook.com/istad.co"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-facebook-f text-2xl duration-500 lg:hover:translate-y-[-5px]"
+            ></i>
+          </a>
+          <a
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            href="https://www.youtube.com/@istad7665"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-youtube text-2xl duration-500 lg:hover:translate-y-[-5px]"
+            ></i>
+          </a>
+          <a
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            href="https://www.tiktok.com/@istad369?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-tiktok text-2xl duration-500 lg:hover:translate-y-[-5px]"
+            ></i>
+          </a>
+          <a
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            href="https://t.me/istadckh"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-telegram text-2xl duration-500 lg:hover:translate-y-[-5px]"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./node_modules/preline/dist/preline.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const btnMode = document.getElementById("btnMode");
+      btnMode.onclick = function () {
+        console.log("Change Mode");
+        const usedMode = localStorage.theme;
+        console.log("Used Mode", usedMode);
+        if (usedMode === "light") {
+          localStorage.theme = "dark";
+          btnMode.textContent = "Light Mode";
+        } else {
+          localStorage.theme = "light";
+          btnMode.textContent = "Dark Mode";
+        }
+
+        document.documentElement.classList.toggle(
+          "dark",
+          localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+        );
+      };
+    </script>
+  </body>
+</html>
