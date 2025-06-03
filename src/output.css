@@ -947,9 +947,9 @@
       text-align: end;
     }
   }
-  .lg\:h-\[630px\] {
+  .lg\:h-\[635px\] {
     @media (width >= 64rem) {
-      height: 630px;
+      height: 635px;
     }
   }
   .lg\:px-8 {
